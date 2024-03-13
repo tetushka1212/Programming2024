@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+void Solution(float a, float b, float c) {
+
+
+	float x1, x2, disk;
+	disk = b * b - 4 * a*c;
+
+	if (disk > 0) {
+		x1 = (-b + sqrt(disk)) / (2 * a);
+		x2 = (-b - sqrt(disk)) / (2 * a);
+		cout << x1 << "   " << x2 << endl;
+
+	}
+	if (disk == 0) {
+		x1 = (-b) / 2 * a;
+		cout << x1 << endl;
+
+	}
+	if (disk < 0) {
+		cout << "no solutions";
+	}
+
+}
+void main() {
+	Solution(2.0, 3.0, 1.0);
+
